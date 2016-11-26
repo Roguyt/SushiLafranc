@@ -1,0 +1,50 @@
+// Load variables
+@import "var.less";
+
+// Load responsive
+@import "app_responsive.less";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+
+	background-size: cover;
+
+	text-align: center;
+
+	h1 {
+		font-family: 'Chewy', cursive;
+		font-size: 40px;
+		letter-spacing: 2px;
+		color: #FFF;
+		text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
+		margin: 75px 0;
+
+		a {
+			color: #1da1f3;
+			text-decoration: none;
+		}
+	}
+
+	h1.clmntw {
+		font-size: 20px;
+	}
+
+	.timer {
+		display: inline-block;
+		width: auto;
+
+		.flip-clock-label {
+			color: #FFF;
+			text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+		}
+	}
+}

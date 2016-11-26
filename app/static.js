@@ -17,6 +17,8 @@ var self = module.exports = function(app) {
 		app.use('/lib/normalize-css',  express.static(__dirname + '/../bower_components/normalize-css'));
 		// jQuery
 		app.use('/lib/jquery',  express.static(__dirname + '/../bower_components/jquery/dist'));
+		// jQuery.countdown
+		app.use('/lib/flip-clock',  express.static(__dirname + '/../public/assets/flip-clock'));
 	/**
 	 * Assets
 	 */

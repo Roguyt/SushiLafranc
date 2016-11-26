@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SushiLafranc</title>
+
+		<link rel="stylesheet" type="text/css" href="/lib/normalize-css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/lib/flip-clock/flipclock.css" />
+		<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/app.css" />
+	</head>
+	<body>
+		<h1>Temps depuis que <a href="https://twitter.com/harrylafranc" title="Twitter @harrylafranc" target="_blank">@HarryLafranc</a> a mangé des sushis</h1>
+
+		<div class="timer"></div>
+
+		<h1 class="clmntw">Made with <3 by <a href="https://twitter.com/ClmntW" title="Twitter @ClmntW" target="_blank">@ClmntW</a></h1>
+		
+
+		<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="/lib/flip-clock/flipclock.min.js"></script>
+		<script type="text/javascript">
+			var sushiBg = "<%= sushiBg %>";
+			var date = new Date(<%= date %>);
+		</script>
+		<script type="text/javascript" src="/assets/js/app.js"></script>
+	</body>
+</html>

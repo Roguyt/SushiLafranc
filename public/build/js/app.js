@@ -1,0 +1,1 @@
+$(document).ready(function(){$("body").css("background-image",'url("'+sushiBg+'")');var e=((new Date).getTime()-date.getTime())/1e3;new FlipClock($(".timer"),e,{clockFace:"DailyCounter"})});
