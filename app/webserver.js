@@ -91,7 +91,7 @@
  * Auto download sushi picture
  */
 
-	setInterval(() => {
+	/*setInterval(() => {
 		getLatestPicSushi((error, data) => {
 			if (error === null) {
 				sushiBg = data;
@@ -101,5 +101,5 @@
 				easyDebug.error('Sushi-Pic', 'Error. Applied default picture.');
 			}
 		});
-	}, 1000*10);
+	}, 1000*10);*/
 	//1000 * 60 * 60 * 24
