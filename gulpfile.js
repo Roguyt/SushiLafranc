@@ -19,7 +19,7 @@
 
 	gulp.task('build', function() {
 		// LESS Files
-		gulp.src('./public/dev/less/public/app.less')
+		gulp.src('./public/dev/less/app.less')
 			.pipe(less())
 			.pipe(concat('app.css'))
 			.pipe(cleanCSS())
@@ -27,7 +27,7 @@
 		;
 
 		// JS Files
-		gulp.src('./public/dev/js/public/*.js')
+		gulp.src('./public/dev/js/*.js')
 			.pipe(uglify({
 				mangle: {
 					except: [
