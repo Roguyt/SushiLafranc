@@ -43,9 +43,17 @@
  * Auto download sushi picture
  */
 
+	getLatestPicSushi((error, data) => {
+		if (error === null) {
+			sushiBg = data;
+			easyDebug.info('Sushi-Pic', 'Image updated.');
+		} else {
+			sushiBg = "/assets/img/defaultBg.png";
+			easyDebug.error('Sushi-Pic', 'Error. Applied default picture.');
+		}
+	});
+	
 	setInterval(() => {
-	}, 1000*15);
-
 		getLatestPicSushi((error, data) => {
 			if (error === null) {
 				sushiBg = data;
@@ -55,7 +63,7 @@
 				easyDebug.error('Sushi-Pic', 'Error. Applied default picture.');
 			}
 		});
-	//1000 * 60 * 60 * 24
+	}, 1000 * 60 * 15);
 
 var self = module.exports = function(app) {
 	/**
