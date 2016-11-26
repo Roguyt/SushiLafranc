@@ -70,9 +70,13 @@ var self = module.exports = function(app) {
 					"date": date
 				});
 			} else {
-				res.render('error.ejs', {});
+				res.redirect('/error');
 			}
 		});
+	});
+
+	app.get('/error', (req, res) => {
+		res.render('error.ejs', {});
 	});
 
 	/**
