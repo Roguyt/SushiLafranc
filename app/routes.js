@@ -13,6 +13,12 @@
 	const easyDebug = require('./lib/easyDebug');
 
 /**
+ * Configuration
+ */
+
+	const secret = require('./config/secret.js');
+
+/**
  * Initialization variables
  */
 
@@ -92,16 +98,20 @@ var self = module.exports = function(app) {
 	 * Update timestamp when Harry eat Sushi
 	 */
 	app.get('/update', (req, res) => {
-		if (req.headers.harrytoken == "Kuroyukihime") {
+		if (req.headers.harrytoken == secret.hash) {
 			let date = Date.now();
 			console.log(new Date());
-			fs.writeFile(__dirname + '/config/date.txt', date, (err) => {
-				if (!err) {
-					res.send('Done/20');
-				} else {
-					res.send('Error while writing');
-				}
-			});
+			if (req.headers.debug == "true") {
+				res.send('Done/20');
+			} else {
+				fs.writeFile(__dirname + '/config/date.txt', date, (err) => {
+					if (!err) {
+						res.send('Done/20');
+					} else {
+						res.send('Error while writing');
+					}
+				});
+			}
 		} else {
 			res.send('Get the fuck out of here.');
 		}
