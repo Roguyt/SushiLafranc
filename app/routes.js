@@ -102,18 +102,18 @@ var self = module.exports = function(app) {
 			let date = Date.now();
 			console.log(new Date());
 			if (req.headers.debug == "true") {
-				res.send('Done/20');
+				res.send('success');
 			} else {
 				fs.writeFile(__dirname + '/config/date.txt', date, (err) => {
 					if (!err) {
-						res.send('Done/20');
+						res.send('success');
 					} else {
-						res.send('Error while writing');
+						res.send('error');
 					}
 				});
 			}
 		} else {
-			res.send('Get the fuck out of here.');
+			res.send('forbidden');
 		}
 	});
 };
